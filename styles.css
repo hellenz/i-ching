@@ -1,0 +1,559 @@
+    /* --------------------ROOT-------------------- */
+    :root {
+        /* Colori primari */
+        --white: #fff;
+        --blue: #0081F8; /* Azzurro scuro */
+        --sky-blue: #6AA9FF; /* Azzurro chiaro */
+        --purple: #805eb5; /* Viola */
+        --bg-color: #FBFAF7; /* Sfondo primario */
+        --ivory: #EFEDE8; /* Sfondo secondario */
+        --text-color: black;
+        --dark-grey: #141414;
+        --light-grey: #ccc;
+        --radial-gradient: radial-gradient(circle, var(--purple) 0%, var(--purple) 30%, var(--dark-grey) 50%);
+        --linear-gradient: linear-gradient(to bottom, var(--sky-blue) 0%, var(--ivory) 35%, var(--ivory) 100%);
+        --linear-gradient2: linear-gradient(to bottom, var(--sky-blue) 0%, var(--ivory) 25%, var(--ivory) 100%);
+        
+        /* Font Families */
+        --font-primary: 'degular-display', Arial, sans-serif;
+        --font-secondary: 'Nicholas', serif;
+
+        /* Font Sizes */
+        --font-size-xs: 12px; 
+        --font-size-sm: 24px; 
+        --font-size-md: 28px; 
+        --font-size-lg: 36px; 
+        --font-size-xl: 40px;
+
+
+        /* Font Weights */
+        --font-weight-light: 200;
+        --font-weight-regular: 400;
+        --font-weight-bold: 600;
+
+        /* Line Heights */
+        --line-height-small: 1.2;
+        --line-height-medium: 1.5;
+        --line-height-large: 1.8;
+
+        /* Spaziature */
+        --space-xs: 8px;
+        --space-small: 12px;
+        --space-medium: 20px;
+        --space-large: 36px;
+        --space-xl: 48px;
+
+        /* Breakpoints */
+        --breakpoint-mobile: 480px;
+        --breakpoint-tablet: 768px;
+        --breakpoint-desktop: 1024px;
+
+        }
+/* ------------------------------------------------------BREAKPOINTS- */
+/* Extra large devices (large laptops and desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+    .body {
+        background-color: var(--bg-color);
+        height: 100vh; 
+    }
+
+    .page-setup {
+        display: flex;
+        flex-direction: row !important; /* Impostiamo il layout a riga */
+        height: 100vh; /* Impostiamo l'altezza della pagina a 100vh */
+    }
+
+    .left-side {
+        top: 0;
+        left: 0;
+        width: 50% !important; /* Impostiamo la larghezza del lato sinistro */
+        height: 100vh; /* L'altezza di left-side deve essere 100vh per estendersi sull'intera altezza della finestra */
+        background-color: #f1f1f1;
+        z-index: 1000; /* Assicurati che left-side sia sopra al right-side */
+        overflow-y: auto; /* Permette lo scroll verticale in caso di contenuto troppo alto */
+    }
+
+    .right-side {
+        width: 50% !important; /* Impostiamo la larghezza del lato destro */
+        height: 100%; /* Impostiamo l'altezza per coprire tutta la finestra */
+        overflow-y: auto; /* Abilitiamo lo scroll verticale se il contenuto è lungo */
+        background-color: #fff;
+    }
+
+    .divider {
+        width: 1px !important;
+        height: 100% !important;
+        z-index: 1;
+    }
+}
+/* ------------------------------------------------------BODY-- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: var(--font-primary);
+            display: flex;
+            height: 100vh;
+            background-color: var(--white);
+        }
+
+/* ------------------------------------------------------IMGS--*/
+        .logo {
+            width: 100%; 
+            height: auto; 
+            margin: 0px;
+            display: block; 
+        }
+
+        .hand {
+            width: 50px;
+            height: auto;
+            margin-top: -12px;
+            display: block;
+        }
+
+/* -----------------------------------------------------ALLINEAMENTO TESTO-- */       
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .hidden-text {
+            display: none;
+        }
+
+/* -----------------------------------------------------SPAZIATURE-- */ 
+        .small-space {
+            display: inline-block; 
+            margin-bottom: var(--space-small)
+        }
+        .medium-space {
+            display: inline-block; 
+            margin-bottom: var(--space-medium) 
+        }
+        .large-space {
+            display: inline-block; 
+            margin-bottom: var(--space-large); 
+        }
+
+/* -----------------------------------------------------TIPOGRAFIA-- */ 
+        h1 {
+            /* titolo esagramma */
+            display: inline-block; 
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-lg);
+            color: var(--color-primary);
+            line-height: var(--line-height-large);
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+
+        h2 {
+            /* titolo paragrafo */
+            display: inline-block; 
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-sm);
+            color: var(--color-primary);
+            line-height: normal;
+            margin-bottom: var(--space-medium);
+            text-align: left;
+        }
+
+        h3 {
+            /* nicholas */
+            display: inline-block; 
+            font-family: var(--font-secondary);
+            font-weight: var(--font-weight-light);
+            font-size: var(--font-size-lg);
+            color: var(--color-primary);
+            line-height: var(--line-height-small);
+            margin-bottom: var(--space-small);
+            text-align: left;
+            color: var(--blue)
+        }
+        h4 {
+            /* nicholas */
+            display: inline-block; 
+            font-family: var(--font-secondary);
+            font-weight: var(--font-weight-light);
+            font-size: var(--font-size-sm);
+            color: var(--color-primary);
+            line-height: var(--line-height-small);
+            margin-bottom: var(--space-small);
+            text-align: left;
+            color: var(--blue)
+        }
+
+        p {
+            display: inline-block; 
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-regular);
+            font-size: var(--font-size-sm);
+            color: var(--color-primary);
+            line-height: var(--line-height-small);
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+
+        h6 {
+            font-size: var(--font-size-xs);
+        }
+
+/* -----------------------------------------------------PAGE SETUP-- */
+        .divider {
+            height: 1px;
+            width: 100%;
+            background: var(--text-color);
+            z-index: 1;
+        }
+
+        .page-setup {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .left-side,
+        .right-side {
+            width: 100%;
+        }
+
+        .left-side {
+            height: 100vh;
+            background: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .right-side {
+            height: auto;
+            background: var(--white);
+        }
+
+/* -----------------------------------------------------CONTAINERS-- */
+        .header {
+            display: flex;
+            flex-direction: column;  
+        }
+    
+        .central-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: space-between; 
+            width: 100%;
+            height: auto;
+            gap: 10px;
+        }
+    
+        .launch-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #lineOutput {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+            height: 60px;
+        }
+    
+        #dettagliEsagramma {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            justify-content: space-between;
+            height: 60px;
+        }
+    
+        .esagramma-output {
+            padding: 20px;
+            width: 100%;
+            min-height: 100px;
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-regular);
+            margin-top: 5px;
+        }
+
+        .mutazione {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 100%;
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-regular);
+        }
+    
+/* -----------------------------------------------------MENU-- */
+        .menu-container {
+            display: flex; 
+            flex-direction: column;
+            width: auto;
+            padding: 5px;
+        }
+
+        .menu-items {
+            list-style-type: none; /* Rimuove i pallini */
+        }
+
+        .menu-items a {
+            text-decoration: none; 
+            color: var(--text-color);
+            transition: background-color 0.3s ease; /* Aggiungi transizione per l'effetto hover */
+        }
+
+        .menu-items a:hover {
+            background-color: var(--blue); 
+            color: var(--white); 
+        }
+
+/* -----------------------------------------------------LANCIO DELLE MONETE-- */
+
+        .monete-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+        .moneta {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--radial-gradient);
+        }
+
+        .moneta.testa {
+            background: var(--dark-grey); /* Testa */
+        }
+
+        .moneta.croce {
+            background: var(--radial-gradient); /* Croce */
+        }
+
+/* -----------------------------------------------------BUTTONS-- */
+        .launch-button-container {     
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        #resetButton, #coinFlipButton {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        #resetButton {
+            color: var(--purple);
+            margin-top: 10px;
+        }
+    
+        #coinFlipButton {
+            color: var(--text-color);
+            font: var(--font-primary);
+            font-size: var(--font-size-lg);
+        }
+    
+        #resetButton:hover {
+            color: var(--text-color); 
+        }
+    
+        #coinFlipButton:hover {
+            text-decoration: underline;
+        }
+/* -----------------------------------------------------RESULTS-- */
+        #results {
+            bottom: 0px;
+            display: flex;
+            flex-direction: row;
+            gap: 5px; /* Spazio tra gli elementi della griglia */
+            width: 100%; /* Larghezza completa del contenitore */
+            height: auto;
+            padding: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            overflow-x: hidden; /* Nasconde lo scorrimento orizzontale */
+            overflow-y: hidden;    
+        } 
+
+        .launch-result-box {
+            padding: 5px; /* Distanza interna per i risultati */
+            border-left: 0.5px solid var(--light-grey); 
+            color: var(--light-grey);
+            word-wrap: break-word; /* Forza il testo a capo se non c'è spazio sufficiente */
+            overflow-wrap: break-word; /* Assicura che le parole lunghe vadano a capo */
+            height: auto;
+        }
+
+/* -----------------------------------------------------RIGHT BOX-- */
+    .div-box {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        background: var(--linear-gradient);
+        color: black;
+        font-size: 28px; 
+        text-align: right;
+        cursor: pointer;
+        transition: all 0.3s ease, background 0.3s ease;
+        overflow: hidden;
+        border-bottom: 1px solid var(--light-grey);
+    }
+    .div-box.expanded {
+        background: var(--linear-gradient2);
+        transition: font-size 0.3s ease; 
+        padding: 10px;
+        height: auto; 
+    }
+
+/* -----------------------------------------------------LINES-- */  
+
+    .line,
+    .line-x .line-body,
+    .line-break,
+    .line-break-circle,
+    .line-x  {
+        width: 100px;
+        height: 5px;
+        margin: 2px 0;
+    }
+
+    /* Linea singola (Yang) */
+    .line,
+    .line-x .line-body {
+        background-color: black;
+    }
+
+    /* Linea break (Yin) */
+    .line-break,
+    .line-break-circle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Segmenti della linea con break */
+    .line-break .line-segment,
+    .line-break-circle .line-segment {
+        width: 40px;
+        height: 5px;
+        background-color: black;
+    }
+
+    /* Gap linee break */
+    .line-break .gap,
+    .line-break-circle .gap  {
+        width: 20px;
+    }
+
+    /* ----------Linea spezzata con un cerchietto a destra---------- */
+    .line-break-circle {
+        position: relative;
+    }
+
+    /* Cerchio */
+    .line-break-circle .circle {
+        width: 6px; /* Dimensioni uniformi */
+        height: 6px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        right: -12px; /* Posizionamento preciso a destra */
+    }
+
+    /* -----------------Linea singola con una X a destra----------------- */
+    .line-x,
+    .line-x .x {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .line-x {
+        position: relative;
+    }
+
+    .line-x .x {
+        width: 6px; /* Dimensioni uniformi con il cerchio */
+        height: 6px;
+        position: absolute;
+        right: -12px; /* Posizionamento preciso a destra */
+    }
+
+    /* -----------------X----------------- */
+    .line-x .x::before,
+    .line-x .x::after {
+        content: '';
+        position: absolute;
+        width: 8px; /* Larghezza del segmento */
+        height: 2px; /* Spessore del segmento */
+        background-color: black;
+        transform-origin: center;
+    }
+
+    .line-x .x::before {
+        transform: rotate(45deg); 
+    }
+
+    .line-x .x::after {
+        transform: rotate(-45deg); 
+    }
+
+/* -----------------RIGHT SIDE----------------- */
+
+    /* Regola specifica per le linee in .right-side */
+    .esagramma {
+        width: 100%;
+        margin-bottom: var(--space-large);
+    }
+
+    .esagramma .line,
+    .esagramma .line-body {
+        width: 100%; 
+        background-color: var(--white);
+        height: 2px;
+        margin: 5px 0;
+    }
+
+    .esagramma .line-break  {
+        width: 100%;
+        height: 2px;
+        margin: 5px 0;
+    }
+
+    .esagramma .line-segment {
+        width: 40%;
+        height: 2px;
+        background-color: var(--white);
+    }
+
+    .esagramma .line-break .gap {
+        width: 20%; 
+    }
+
+   
+    

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-ching</title>
+    <!-- Includi il font da Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/kdh4yfa.css">
+    <link rel="stylesheet" href="styles3.css">
+
+
+</head>
+    <div class="page-setup">
+    <!-- LEFT SIDE -->
+        <div class="left-side">
+
+            <div class="header">
+                <img src="Logo.png" alt="Logo" class="logo">
+                <div class="menu-container">
+                    <ul class="menu-items">
+                        <li><a href="#">NOTIONS</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                    </ul>
+                </div> 
+                <div class="central-container">
+                    <div class="launch-container">
+                        <div class="monete-container">
+                            <div class="moneta" id="moneta1"></div> 
+                            <div class="moneta" id="moneta2"></div> 
+                            <div class="moneta" id="moneta3"></div> 
+                        </div>
+    
+                        <div class="launch-button-container">
+                            <button id="coinFlipButton">LANCIA LE MONETE</button>
+                            <img src="HAND.png" alt="hand" class="hand">
+                            <div id="resetButton" href="#">RESTART</div> <!-- Pulsante di reset -->
+                        </div>
+                    </div>
+                    <div class="esagramma-output">
+                        <div id="lineOutput"></div> <!-- Nuovo div per le linee -->
+                        <div id="dettagliEsagramma"></div>
+                    </div>
+                </div>
+            </div>
+                
+                <h8 id="results"></h8> <!-- Risultati dei lanci -->
+            
+        </div>
+    <!-- DIVIDER -->
+        <div class="divider"></div>
+    <!-- RIGHT SIDE -->
+        <div class="right-side" id="iching-container">
+        <!-- I div saranno generati dinamicamente dallo script -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
