@@ -208,6 +208,8 @@
 
         h6 {
             font-size: var(--font-size-xs);
+            font-family: var(--font-primary);
+            font-weight: var(--font-weight-regular);
         }
 
 /* -----------------------------------------------------PAGE SETUP-- */
@@ -298,8 +300,10 @@
             justify-content: center;
             gap: 5px;
             width: 100%;
-            font-size: var(--font-size-sm);
+            font: var(--font-primary);
+            font-size: 18px;
             font-weight: var(--font-weight-regular);
+            color: var(--text-color);
         }
     
 /* -----------------------------------------------------MENU-- */
